@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="shortcut icon" href="logo.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="/assets/css/custom.css">-->
+    <title>Book a room</title>
+</head>
+<style>
+  
+    h3{
+        color: white;
+    }
+    body{                                                               /*body*/
+                background-image: url("bg1.jpg");
+                background-attachment: fixed;
+                background-size: cover;
+            
+                font-family: 'Parisienne', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+      h1{
+          color: rgb(185, 144, 45);
+      }
+      label{
+          color: white;
+      }
+      .text-center{
+          color: white;
+      }
+            .content{                                                              
+              background: linear-gradient(to right, rgba(238, 187, 69, 0.514), rgba(153, 108, 3, 0.514));
+              text-align: center;
+              color: wheat;
+              font-size: 25px;
+              border-radius: 9px;
+              margin:3%;
+            }
+            h2{                                                                     /*headings*/
+              text-shadow: 2px 2px rgb(39, 38, 38);
+              color: rgb(235, 226, 205);
+            }
+
+
+
+             .logo{    
+              font-family: 'Tangerine', cursive;
+              font-size: 320px;
+            text-align: center;                                                             /*logo formatting*/
+            color:  rgb(185, 144, 45);
+            text-shadow: 4px 4px 4px #aaa;
+            position: relative;
+            margin: auto;
+  
+             }
+             
+                                            /******************************************************
+                                            **************NAVBAR AND DROPDOWN**********************
+                                            ******************************************************/
+                            
+            .navbar {                                                   /*navbar*/
+
+            position:  sticky;
+            top: 0;
+            z-index: 2;
+            }
+
+            .navbar a {                                         /* Links inside navbar */
+            float: left;
+            font-size: 30px;
+            color: rgb(185, 144, 45);
+            width: 18%;
+            text-align: center;
+            padding: 6px 11px;
+            text-decoration: none;
+            transition: 0.5s ease;
+            z-index: 2;
+            }
+
+            .dropdown {                                     /* The dropdown container */                                     
+            float: left;
+            overflow: hidden;
+            width: 18%;
+            }
+#one{
+  font-size: 25px;
+  color: white;
+}
+            .dropdown .dropbtn {                                        /* Dropdown button */
+            font-size: 30px;
+            border: none;
+            outline: none;
+            color: rgb(185, 144, 45);
+            width: 100%;
+            padding: 6px 11x;
+            transition: 0.5s ease;
+            background-color: inherit;
+            font-family: inherit;                           /*vertical align on mobile phones */
+            margin: 0;                                      /* vertical align on mobile phones */
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {                                 /* change colors of links on hover*/
+            background-color: rgb(185, 144, 45);
+            color: white;
+            border-radius: 5px;
+            }
+
+            .dropdown-content {                                                         /* Dropdown content (hidden) */
+            display: none;
+            position: absolute;
+            font-size: 27px;
+            background-color: rgb(185, 144, 45);
+            width: 21%;
+            border-radius: 5px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 2;
+            }
+
+            .dropdown-content a {                                                            /* Links inside dropdown */
+            float: none;
+            color: rgba(26, 25, 25, 0.822);
+            padding: 5px 11px;
+            text-decoration: none;
+            display: block;
+            font-size: 24px;
+            text-align: left;
+            z-index: 1;
+            }
+
+            .dropdown-content a:hover {                                   /* Add a grey background color to dropdown links on hover */
+            background-color: rgba(202, 175, 112, 0.356);
+            border-radius: 5px;
+            width: 91%;
+            }
+
+            .dropdown:hover .dropdown-content {                             /* Show the dropdown menu on hover */
+            display: block;
+            } 
+
+
+
+            
+       
+</style>
+<body >
+        <div class="navbar">
+                <a href="main.html">Home</a>
+                <a href="#">Hotel Rooms</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="#">Nearby</a>
+                <div class="dropdown">
+                  <button class="dropbtn">Our Locations
+                  </button>
+                  <div class="dropdown-content">            
+                    <a href="#">Delhi</a>
+                    <a href="#">Lucknow</a>
+                    <a href="#">Jaipyr</a>
+                  </div>
+                </div>
+        </div> 
+
+    <div class="container">
+     <center> <h1 >
+            BOOK A ROOM 
+        </h1></center>
+    <form class="add-customer-form" action="" method="post" enctype="multipart/form-data">
+        <div class="form-row">
+                <div class="form-group col-md-6">
+                <label for="last-name">User name</label>
+
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+                    </div>
+            <div class="form-group col-md-6">
+                    <label for="last-name">Room No.</label>
+
+                <input type="text" class="form-control" name="room_no" id="room_no" placeholder="Room no." required>
+            </div>
+        </div>
+     
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                    <label for="last-name">Check In</label>
+
+                <input type="date" class="form-control" name="checkin" id="checkin" placeholder="Check in Date" required>
+            </div>
+            <div class="form-group col-md-6">
+                    <label for="last-name">Check out</label>
+
+                <input type="date" class="form-control" name="checkout" id="checkout" placeholder="Check out Date" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                    <label for="last-name">Phone No.</label>
+
+                <input type="text" class="form-control" name="number" id="number" placeholder="Phone Number" required>
+            </div>
+        </div>
+        <div>
+        <button type="submit" class="btn btn-primary float-right" >Book</button>
+        </div>
+        <br><br>
+    </form>
+<br><Br>
+    <a href="billing.html"><button  class="btn btn-success" >Proceed to pay</button></a>
+</div>
+<br><br><bR><BR><BR><BR><BR><BR><BR><BR><Br>
+    <div class="content">
+            <h2>
+            Atina Group Of Hotels <br>
+            </h2>
+            Quintessentially a traditional Indian brand in its DNA, The Atina Group of Hotels is one of the Leading Hotel Groups in India,
+            recognized throughout the nation for its unique flavor of hospitality and finesse. The Atina Group boasts of being one of the first 5 star hotels in India.
+            Atina firmly believe in sustainable luxury, adopting eco-friendly ways and sustainable energy that can be adopted by the hospitality industry.  
+            With 5-star business and leisure hotels in the city of Jaipur, Lucknow and Delhi, Atina offers its guests sustainable luxury, 
+            efficient services and amenities and a touch of heritage with an assurance of high levels of quality. <br>
+          </div>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>  Rixos Hotels</title>
+        <link rel="shortcut icon" href="logo.ico" />
+
+        <style>
+            body{                                                               /*body*/
+                background-image: url("bg2.jpg");
+                background-attachment: fixed;
+                background-size: cover;
+            }
+
+            .content{                                                              
+              background-color: rgba(185, 144, 45, 0.432);
+              text-align: center;
+              color: rgb(22, 22, 22);
+              font-size: 30px;
+              border-radius: 9px;
+              margin:3%;
+            }
+            h2{                                                                     /*headings*/
+              text-shadow: 2px 2px rgb(39, 38, 38);
+              color: rgb(185, 144, 45);
+            }
+             .pic{                                                                  /*pic*/
+              border: 13px solid rgba(185, 144, 4,0.34);
+              transition: 0.7s;
+              border-radius: 10px;
+             }  
+             .slideshow-container:hover .pic{
+              border: 13px solid rgba(255, 255, 255, 0.34);
+             }
+             .logo{                                                                 /*logo formatting*/
+            
+            width: 400px;
+            height: 150px;
+            position: relative;
+            margin: auto;
+             }
+                                            /******************************************************
+                                            **************NAVBAR AND DROPDOWN**********************
+                                            ******************************************************/
+                            
+            .navbar {                                                   /*navbar*/
+            overflow: hidden;
+            background-color: rgba(51, 51, 51, 0.74);
+            font-family: Arial;
+            }
+
+            .navbar a {                                         /* Links inside navbar */
+            float: left;
+            font-size: 16px;
+            color: rgb(185, 144, 45);
+            width: 18%;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: 0.5s ease;
+            }
+
+            .dropdown {                                      /* The dropdown container */                                     
+            float: left;
+            overflow: hidden;
+            width: 18%;
+            }
+
+            .dropdown .dropbtn {                                        /* Dropdown button */
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: rgb(185, 144, 45);
+            width: 100%;
+            padding: 14px 16px;
+            transition: 0.5s ease;
+            background-color: inherit;
+            font-family: inherit;                           /*vertical align on mobile phones */
+            margin: 0;                                      /* vertical align on mobile phones */
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {                                 /* change colors of links on hover*/
+            background-color: rgb(185, 144, 45);
+            color: white;
+            border-radius: 5px;
+            }
+
+            .dropdown-content {                                                         /* Dropdown content (hidden) */
+            display: none;
+            position: absolute;
+            background-color: rgb(185, 144, 45);
+            width: 21%;
+            border-radius: 5px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .dropdown-content a {                                                            /* Links inside dropdown */
+            float: none;
+            color: rgba(26, 25, 25, 0.822);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .dropdown-content a:hover {                                   /* Add a grey background color to dropdown links on hover */
+            background-color: rgba(202, 175, 112, 0.356);
+            border-radius: 5px;
+            width: 91%;
+            }
+
+            .dropdown:hover .dropdown-content {                             /* Show the dropdown menu on hover */
+            display: block;
+            } 
+
+                                            /******************************************************
+                                            **************SLIDESHOW********************************
+                                            ******************************************************/
+
+            .mySlides {display: none}
+            img {vertical-align: middle;
+
+            }
+
+            /* Slideshow container */
+            .slideshow-container {
+              background-color: rgba(250, 235, 215, 0.288);
+            width: 1200px;
+            height: 700px;
+            position: relative;
+            margin: auto;
+            }
+
+            /* Next & previous buttons */
+            .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -28px;
+            color: white;
+            font-weight: bold;
+            font-size: 28px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            }
+
+            .next {                                             /* Position next to right */
+            right=0;
+            border-radius: 3px 0 0 3px;
+            }
+            .prev{                                              /*position of prev*/
+              left: 0;
+            }
+            .prev:hover, .next:hover {                          /*hover cell(transparent black)*/
+            background-color: rgba(185,144,45,0.8);
+            }
+
+            .text {                                                         /* Caption text */
+            color:  rgb(185, 144, 45);
+            transition: 0.7s;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 30px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            }
+            .slideshow-container:hover .text{
+              color: white;
+            }                                    
+                                            /******************************************************
+                                            *********FADING ANIMATION(copied from internet)********
+                                            ******************************************************/
+
+            /* Fading animation */
+            .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+            }
+
+            @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+            }
+
+        </style>
+    </head>
+
+    <body>
+            <div class="logo"><img src="logo.png" alt="logo" width="400px" ></div><br>
+
+            <!- /*************************************NAVBAR AND DROPDOWN*********************************************************************************/ ->
+                <div class="navbar">
+                    <a href="#">Home</a>
+                    <a href="#">Hotel Rooms</a>
+                    <a href="#">Facilities</a>
+                    <a href="#">Nearby</a>
+                    <div class="dropdown">
+                      <button class="dropbtn">Our Locations
+                      </button>
+                      <div class="dropdown-content">            
+                        <a href="#">Delhi</a>
+                        <a href="#">Lucknow</a>
+                        <a href="#">Jaipyr</a>
+                      </div>
+                    </div>
+            </div> 
+            <br><br>
+            <!-/********************************************SLIDESHOW*****************************************************************************/->
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img src="hot3.jpg" class="pic" style="width:100%; height: 100%;">
+                  <div class="text">Luxurious hotels for your pleasant stay...</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="hot2.jpg" class="pic" style="width:100%; height: 100%;">
+                  <div class="text">Luxury rooms</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="hot4.jpg" class="pic" style="width:100%; height: 100%;">
+                    <div class="text">24/7 Gymnasium</div>
+                  </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                
+                </div>
+                 
+
+                <script>
+                  var slideIndex = 1;
+                  showSlides(slideIndex);
+                  
+                  function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                  }
+                  
+                  function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                  }
+                  
+                  function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                  }  
+              </script>
+
+
+              <div class="content">
+                <h2>
+                <u>RIXOS GROUP OF HOTELS </u><br>
+                </h2>
+                Quintessentially a traditional Indian brand in its DNA, The Rixos Group of Hotels is one of the Leading Hotel Groups in India,
+                recognized throughout the nation for its unique flavor of hospitality and finesse. The Rixos Group boasts of being one of the first 5 star hotels in India.
+                Rixos firmly believe in sustainable luxury, adopting eco-friendly ways and sustainable energy that can be adopted by the hospitality industry.  
+                With 5-star business and leisure hotels in the city of Jaipur, Lucknow and Delhi, Clarks offers its guests sustainable luxury, 
+                efficient services and amenities and a touch of heritage with an assurance of high levels of quality. <br>
+              </div>
+              
+    
+    </body>
+</html>
